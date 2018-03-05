@@ -388,7 +388,7 @@ public class Question {
         
         //Create a list of known keywords and check to see if any of the words in our question match the keywords
         String[] keywords = {"absract", "assert", "boolean", "break", "byte", "case", "catch", "char",
-            "do", "default", "continue", "double", "else", "enum", "extends", "final",
+            "default", "continue", "double", "else", "enum", "extends", "final",
             "finally", "float", "for", "if", "implements", "import", "instanceof", "int",
             "interface", "long", "native", "new", "package", "private", "protected", "public",
             "return", "short", "static", "super", "switch", "this", "throws", "try", "void", "while"};
@@ -415,7 +415,7 @@ public class Question {
         
         //Finally checks for constants and colors them accordingly
         for (int i = 0; i < questionBody.length(); i++) {
-            if (Character.isDigit(questionBody.charAt(i))) {
+            if ((Character.isDigit(questionBody.charAt(i)) && !Character.isAlphabetic(questionBody.charAt(i-1)))) {
                 test += "<span class=\"constant\"> " + questionBody.charAt(i) + "</span>";
                 if (Character.isDigit(questionBody.charAt(i + 1))) {
                     test += "<span class=\"constant\">" + questionBody.charAt(i + 1) + "</span>";

@@ -51,11 +51,10 @@
 
 
             <div id="question"><div id="questionstatement">
-                    <%= question.getQuestionTitle()%>  
-
-                    <%= question.getQuestionBody()%> <br>
+                    <%= question.getQuestionTitle()%>   
+                    <span class="preBlock" > <%= question.getQuestionBody()%> </span><br>
                 </div></div>
-                <%= question.determineAnswers()%>      
+                <%= question.determineAnswers()%>     
 
             <%= question.checkAnswer(request)%>
 
