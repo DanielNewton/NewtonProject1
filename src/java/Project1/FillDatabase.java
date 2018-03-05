@@ -1,7 +1,7 @@
 /*
 Author: Daniel Newton
 File: FillDatabase.java
-Created on 2/22/18
+Created on 2/22/
 
  */
 package Project1;
@@ -183,7 +183,7 @@ public class FillDatabase {
             Class.forName("com.mysql.jdbc.Driver");
             System.out.println("Driver loaded");
             // Establish a connection 
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/project1", "scott", "tiger");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://35.185.94.191:3306/newton", "newton", "tiger");
             System.out.println("Database connected");
 
             //Create possible queries

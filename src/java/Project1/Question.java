@@ -37,7 +37,7 @@ public class Question {
             Class.forName("com.mysql.jdbc.Driver");
             System.out.println("Driver loaded");
             // Establish a connection 
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/project1", "scott", "tiger");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://35.185.94.191:3306/newton", "newton", "tiger");
             System.out.println("Database connected");
 
             //Create possible queries
@@ -436,7 +436,7 @@ public class Question {
             preparedInsertStmt.setInt(1, chapterNo);
             preparedInsertStmt.setInt(2, questionNo);
             preparedInsertStmt.setBoolean(3, isCorrect);
-            preparedInsertStmt.setString(4, request.getLocalName());
+            preparedInsertStmt.setString(4, request.getRemoteAddr());
             if (userAnswer.contains("A")) {
                 preparedInsertStmt.setInt(5, 0b1);
             } else {
